@@ -1,30 +1,4 @@
 <script>
-export default {
-  data() {
-    return {
-      textContent: "Hi, I am Ems Mary Tampus",
-      currentIndex: 0,
-      colors: [
-        "#FF0000", // Red
-        "#00FF00", // Green
-        "#0000FF", // Blue
-      ],
-    };
-  },
-  mounted() {
-    this.typeText();
-  },
-  methods: {
-    typeText() {
-      setInterval(() => {
-        this.currentIndex = (this.currentIndex + 1) % this.textContent.length;
-        const slicedText = this.textContent.slice(0, this.currentIndex + 1);
-        this.$refs.text.style.color = this.colors[this.currentIndex % this.colors.length];
-        this.$refs.text.textContent = slicedText;
-      }, 200);
-    },
-  },
-};
 </script>
 
 <template>
@@ -35,7 +9,7 @@ export default {
     >
       <!-- Text content -->
       <div class="w-full md:w-1/2 text-center">
-        <h1 ref="text" class="text-3xl md:text-4xl font-bold mb-4"></h1>
+        <h1 ref="text" class="text-3xl md:text-4xl font-bold mb-4">Hi! I am Ems Mary Tampus</h1>
         <p class="text-lg font-bold">A BSIT student at Cordova Public College.</p>
         <p class="text-lg font-semibold">and Web Developer</p>
       </div>
